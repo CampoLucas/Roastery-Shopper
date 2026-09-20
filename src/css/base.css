@@ -1,7 +1,7 @@
-@import url(icon.css);
-@import url(navbar.css);
-@import url(hero.css);
-@import url(footer.css);
+@import url(./icon.css);
+@import url(./navbar.css);
+@import url(./hero.css);
+@import url(./footer.css);
 
 :root {
     /* Defining the websites colors */

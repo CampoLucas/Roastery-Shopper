@@ -18,13 +18,13 @@
 }
 
 .icon-logo {
-    --icon: url("/src/media/fav-icon.svg");
+    --icon: url("../media/fav-icon.svg");
 }
 
 .icon-menu {
-    --icon: url("/src/media/icons/menu-lines.svg");
+    --icon: url("../media/icons/menu-lines.svg");
 }
 
 .icon-cart {
-    --icon: url("/src/media/icons/cart.svg");
+    --icon: url("../media/icons/cart.svg");
 }
