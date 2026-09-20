@@ -1,0 +1,72 @@
+@import url(icon.css);
+@import url(navbar.css);
+@import url(hero.css);
+@import url(footer.css);
+
+:root {
+    /* Defining the websites colors */
+    /* Nautral colors */
+    --color-bg-main: #56e18e;
+    --color-bg-secondary: #8b5e36;
+    --color-bg-surface: #b0b0b0;
+
+    /* Nav bar */
+    --color-bg-navbar: #191919;
+    --text-color-navbar: #FFFFFF;
+    --text-color-navbar-hover: #cac9c9;
+
+    --color-button-primary: var(--color-bg-main);
+    --color-button-primary-hover: #4eca7f;
+
+    /*  */
+
+    /* Footer */
+    --color-bg-footer: #2f2f2f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Google Sans Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper-padded {
+    margin: 0 auto;
+    max-width: 1660px;
+}
+
+@media screen and (width <= 766px) {
+    .desktop {
+        display: none;
+    }
+}
+
+@media screen and (width > 766px) {
+    .mobile {
+        display: none;
+    }
+}
+

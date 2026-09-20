@@ -1,0 +1,30 @@
+.icon {
+    display: inline-block;
+    height: 2.5rem;
+    aspect-ratio: 1;
+    vertical-align: -0.125em;
+    background-color: currentColor;
+    mask: var(--icon) center / contain no-repeat;
+}
+
+.icon-multicolor {
+    filter: none;
+    background: var(--icon) center / contain no-repeat;
+    mask: none;
+}
+
+.icon-multicolor:hover {
+    filter: grayscale(1);
+}
+
+.icon-logo {
+    --icon: url("/src/media/fav-icon.svg");
+}
+
+.icon-menu {
+    --icon: url("/src/media/icons/menu-lines.svg");
+}
+
+.icon-cart {
+    --icon: url("/src/media/icons/cart.svg");
+}

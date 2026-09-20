@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roastery Shopper - A Showcase Website</title>
+    <link rel="stylesheet" href="/src/css/base.css">
+    <link rel="icon" type="image/svg+xml" href="/src/media/fav-icon.svg">
+
+    <!-- Goolge fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- The nav bar -->
+    <header class="navbar">
+        <!-- Nav bar browser -->
+        <nav class="navbar__wrapper wrapper-padded desktop">
+            <!-- Logo -->
+            <div class="left">
+                <a href="#hero-page"><span class="icon icon-logo icon-multicolor"></span></a>
+            </div>
+            
+            
+            <!-- Buttons -->
+            <div class="right">
+                <ul>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="/catalog.html"><strong>Catalog</strong></a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a class="cart" href=""><span class="icon icon-cart"></span> Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Nav bar mobile -->
+        <nav class="navbar__wrapper mobile">
+            <div>
+                <button><span class="icon icon-menu"></span></button>
+            </div>
+            <div>
+                <a href=""><span class="icon icon-logo icon-multicolor"></span></a>
+            </div>
+
+            <div>
+                <button><span class="icon icon-cart"></span></button>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero-page">
+            <div class="hero-page__wrapper wrapper-padded">
+                <div class="left">
+                    <h1>Everything about coffee! We sell it!</h1>
+                    <a href="">See catalog</a>
+                </div>
+
+                <div class="right">
+                    <img class="hero-page__img" src="/src/media/hero-page/cover-s.jpg" srcset="src/media/hero-page/cover-s.jpg 600w, src/media/hero-page/cover-m.jpg 1000w, src/media/hero-page/cover-b.jpg 1400w" sizes="(min-width: 768px) 50vw, 100vw" alt="Dripping Coffee into a cup" fetchpriority="high">
+                </div>
+
+            </div>
+        </section>
+
+        <section id="offers">
+
+        </section>
+
+    </main>
+    <footer id="contact">
+
+    </footer>
+</body>
+</html>
