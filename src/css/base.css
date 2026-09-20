@@ -1,13 +1,14 @@
 @import url(./icon.css);
 @import url(./navbar.css);
-@import url(./hero.css);
+@import url(./hero2.css);
 @import url(./footer.css);
 
 :root {
     /* Defining the websites colors */
     /* Nautral colors */
     --color-bg-main: #56e18e;
-    --color-bg-secondary: #8b5e36;
+    --color-bg-primary: #8b5e36;
+    --color-bg-secondary: #301a06;
     --color-bg-surface: #b0b0b0;
 
     /* Nav bar */
@@ -22,6 +23,7 @@
 
     /* Footer */
     --color-bg-footer: #2f2f2f;
+
 }
 
 * {

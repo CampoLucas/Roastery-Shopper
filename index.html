@@ -27,7 +27,7 @@
             <div class="right">
                 <ul>
                     <li><a href="#offers">Offers</a></li>
-                    <li><a href="./catalog.html"><strong>Catalog</strong></a></li>
+                    <li><a href="#catalog.html"><strong>Catalog</strong></a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a class="cart" href=""><span class="icon icon-cart"></span> Cart</a></li>
                 </ul>
@@ -49,16 +49,45 @@
         </nav>
     </header>
     <main>
-        <section id="hero-page">
-            <div class="hero-page__wrapper wrapper-padded">
+        <!-- <section id="hero-page">
+            <div class="hero-page__wrapper">
                 <div class="left">
                     <h1>Everything about coffee! We sell it!</h1>
-                    <a href="./catalog.html">See catalog</a>
+                    <a href="#catalog">See catalog</a>
                 </div>
 
                 <div class="right">
-                    <img class="hero-page__img" src="./src/media/hero-page/cover-s.jpg" srcset="./src/media/hero-page/cover-s.jpg 600w, ./src/media/hero-page/cover-m.jpg 1000w, ./src/media/hero-page/cover-b.jpg 1400w" sizes="(min-width: 768px) 50vw, 100vw" alt="Dripping Coffee into a cup" fetchpriority="high">
+                    <picture>
+                        <source srcset="./src/media/hero-page/cover-s.jpg" media="(max-width: 640px)" />
+                        <source srcset="./src/media/hero-page/cover-m.jpg" media="(max-width: 1920px)" />
+                        <source srcset="./src/media/hero-page/cover-b.jpg" />
+                        <img class="hero-page__img" alt="Driping coffee into a cup" />
+                    </picture>
                 </div>
+
+            </div>
+        </section> -->
+
+        <section id="hero-page">
+            <div class="hero-page">
+                <div class="hero-page__wrapper gradient-border-sharp">
+                    <div class="left">
+                    <h1>Everything about coffee! We sell it!</h1>
+                    <a href="#catalog">See catalog</a>
+                </div>
+
+                <div class="right">
+                    <div class="img-container">
+                        <picture >
+                            <source srcset="./src/media/hero-page/cover-s.jpg" media="(max-width: 640px)" />
+                            <source srcset="./src/media/hero-page/cover-m.jpg" media="(max-width: 1920px)" />
+                            <source srcset="./src/media/hero-page/cover-b.jpg" />
+                            <img class="hero-page__img" alt="Driping coffee into a cup" />
+                        </picture>
+                    </div>
+                </div>
+                </div>
+                
 
             </div>
         </section>
