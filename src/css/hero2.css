@@ -25,7 +25,7 @@
     display: flex;
     background: var(--hero-bg);
     background-size: cover;
-    min-height: 100svh;
+    min-height: 100vh;
     justify-content: center;
 }
 
@@ -47,7 +47,7 @@
 .hero-page__wrapper .right,
 .hero-page__wrapper .left {
     display: flex;
-    padding-top: 3rem;
+    padding-top: var(--size);
 }
 
 .hero-page__wrapper .right {
@@ -103,19 +103,19 @@
 }
 
 
-@media screen and (max-height: 380px) {
+@media screen and (max-height: 380px) and (width < 800px) {
     /* .hero-page__wrapper {
         flex-direction: column;
     } */
     #hero-page {
-        height: 100svh;
+        height: 100vh;
         overflow: hidden;
     }
 
 
     .hero-page__wrapper .left {
         margin-top: -10rem;
-        z-index: 9999;
+        z-index: 1;
     }
 
     
@@ -124,7 +124,7 @@
 @media screen and (width >= 800px) {
     /* horizontal style */
     #hero-page {
-        height: 100svh;
+        height: 100vh;
         overflow: hidden;
     }
 
