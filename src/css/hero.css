@@ -1,91 +1,200 @@
+:root {
+    --hero-bg-s: url(../media/hero-page/bg3-s.webp);
+    --hero-bg-m: url(../media/hero-page/bg3-m.webp);
+    --hero-bg-b: url(../media/hero-page/bg3-b.webp);
+    --hero-bg: var(--hero-bg-s);
+    --hero-bg-color: black;
+    --hero-border-color: linear-gradient(to bottom, #797070, #615b5b);
+    --hero-font-color: rgb(248, 247, 247);--hero-pad: 1rem;
+    --hero-mask: linear-gradient(180deg, black 45%, transparent 100%);
+    --hero-pad: 5%;
+}
+
 #hero-page {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: var(--hero-bg-color);
+    background-size: cover;
     height: 100svh;
-    background: var(--color-bg-secondary);
-    box-sizing: content-box;
-    overflow-x: hidden;
-    color: aliceblue;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Adjust the background image depending on the screen width */
+
+@media screen and (width >= 800px) {
+    #hero-page {
+        background-image: var(--hero-bg-s);
+    }
+}
+
+@media screen and (width >= 1280px) {
+    #hero-page {
+        background-image: var(--hero-bg-m);
+    }
+}
+
+@media screen and (width >= 1920px) {
+    #hero-page {
+        background-image: var(--hero-bg-b);
+    }
+}
+
+
+
+
+/* Text and buttons and other elements */
+.hero-page h1 {
+    font-size: clamp(0.5rem, clamp(3svh, 10vw, 7svh), 8rem);
+}
+
+.hero-page a {
+    align-self: flex-start;
+    padding: .75rem;
+    background-color: var(--color-bg-main);
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: clamp(1rem, 1.2vw + 0.75rem, 1.5rem);
+}
+
+#hero-page .img-container {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(0deg, transparent 0%,black 50%, transparent 100%);
+}
+
+#hero-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Apply flex by inheriting it from the id */
+.hero-page, 
+.hero-page__wrapper,
+.hero-page__wrapper .right,
+.hero-page__wrapper .left {
+    display: inherit;
+}
+
+/* Collapsed style */
+.hero-page {
+    padding: 0;
 }
 
 .hero-page__wrapper {
-    display: flex;
     flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-
-    gap: 3rem;
-    width: 100%;
-    max-width: 1200px;
-    margin-inline: auto;
-    padding-block: 4rem;
-    padding-inline: clamp(1rem, 5vw, 4rem);
-    box-sizing: border-box;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--color-bg-secondary), var(--color-bg-primary));
+    background-color: var(--color-bg-primary);
 }
 
-.hero-page__wrapper .right, 
+.hero-page__wrapper .right,
 .hero-page__wrapper .left {
-    display: flex;
+    padding-top: var(--size);
+}
+
+.hero-page__wrapper .right {
+    flex: 2;
+}
+
+.hero-page__wrapper .left {
+    flex: 1;
     flex-direction: column;
-    min-width: 0;
+    justify-content: center;
+    padding: 3rem;
+    color: var(--hero-font-color);
+    gap: 1rem;
 }
 
-.hero-page__wrapper .left {
-    max-width: 800px;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin: 0 auto;
+.gradient-border-sharp {
+    border: solid;
+    border-width: 0 4px;
+    border-image: var(--hero-border-color);
+    border-image-slice: 1; 
 }
 
-.hero-page__img {
-    display: block;
-    width: auto;
-    height: 100%;
-    max-height: 70svh;
-    object-fit: cover;
-    /* mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent), linear-gradient(to bottom, transparent, black 20%, black 80%, transparent); */
-    mask-image: radial-gradient(black 20%, transparent 70%);
-    /* mask-composite: intersect; */
-}
-
-#hero-page a {
-    background: var(--color-button-primary);
-    padding: 1rem;
-    border-radius: 5px;
-    color: black;
-}
-
-#hero-page a:hover {
-    background: var(--color-button-primary-hover);
-}
-
-@media screen and (width > 488px) {
-    #hero-page h1 {
-        font-size: 3rem;
-    }
-}
-
-@media screen and (width > 1032px) {
+@media screen and (width < 800px) {
     .hero-page__wrapper {
-        flex-direction: row;
-        align-items: center;
-        gap: 5rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
     }
-
-    #hero-page h1 {
-        font-size: 4rem;
+    
+    .hero-page__wrapper, 
+    .hero-page__wrapper .right, 
+    .hero-page__wrapper .left {
+        left: 0;
+        right: 0;
+    }
+    
+    
+    .hero-page__wrapper .right {
+        position: inherit;
+        top: clamp(-60svh, 120svh - 675px, 0px);/* min -60svh max 0*/
     }
 
     .hero-page__wrapper .left {
-        flex: 1 1 35%;
-    }
-
-    .hero-page__wrapper .right {
-        flex: 1 1 65%;
-    }
-
-    .hero-page__img {
-        max-height: 80svh;
+        position: inherit;
+        background: linear-gradient(to top, var(--color-bg-primary), transparent);
+        z-index: 1;
     }
 }
+
+@media screen and (width >= 800px) {
+    .hero-page__wrapper .right {
+        position: relative;
+    }
+    
+    #hero-page .img-container {
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+}
+
+
+
+
+/* Horizontal style's modifications */
+@media screen and (width >= 800px) {
+    #hero-page {
+        height: 100svh;
+        overflow: hidden;
+    }
+
+    :root {
+        --hero-pad: clamp(5%, 10%, 20svw);
+    }
+
+    .hero-page {
+        --offset: 5%;
+        padding-inline: var(--hero-pad);
+
+        background: linear-gradient(90deg, 
+            transparent clamp(0%, var(--hero-pad), calc(var(--hero-pad) - var(--offset))), 
+            var(--hero-bg-color) var(--hero-pad), 
+            var(--hero-bg-color) calc(100% - var(--hero-pad)), 
+            transparent clamp(calc(100% - var(--hero-pad)), 100%, calc(100% - (var(--hero-pad) - var(--offset)))));
+
+        flex: 1;
+    }
+
+    .hero-page__wrapper .left {
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (width >= 1400px) {
+    .hero-page__wrapper {
+        flex-direction: row;
+    }
+
+    #hero-page .img-container {
+        mask-image: linear-gradient(90deg, transparent 0%,black 50%, transparent 100%);
+    }
+}
+
+    

@@ -1,6 +1,6 @@
 @import url(./icon.css);
 @import url(./navbar.css);
-@import url(./hero2.css);
+@import url(./hero.css);
 @import url(./footer.css);
 
 :root {
@@ -39,6 +39,7 @@ body {
     font-family: "Google Sans Flex", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    background-color: #191919; /* In case a background doesn't load in time, it just shows a black background instead of a white one */
 }
 
 button, a {
