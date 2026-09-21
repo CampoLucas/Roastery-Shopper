@@ -1,105 +1,152 @@
-.filters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
+:root {
+    --catalog-bg-color: #dbd9d9;
+    --filters-gap: .5rem;
 }
 
-.filters p {
-    margin: 0 0 0.35rem;
-    font-size: 0.8rem;
+#catalog {
+    padding-top: 3rem;
+    background-color: var(--catalog-bg-color);
+    overflow-y: hidden;
+}
+
+/* Filter */
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-lable {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.controls {
+    display: flex;
+    gap: var(--filters-gap);
 }
 
 .filters .controls {
     display: flex;
-    gap: 0.5rem;
+    width: 20rem;
 }
 
-.filters select {
-    padding: 0.5rem 0.75rem;
-    border: 1px solid #b8b8b8;
-    background: #fff;
-    color: inherit;
-    font: inherit;
-    font-size: 0.85rem;
+.filters form {
+    width: auto;
+    flex: 1;
+    padding: .2rem .3rem;
+    background-color: #f7f6f6;
+    margin-bottom: 1rem;
+    border: solid;
+    border-radius: 15px;
+}
+
+.filters form:hover {
+    background-color: var(--color-button-primary);
 }
 
 .filters select:focus-visible {
-    outline: 2px solid #4d4d4d;
-    outline-offset: 2px;
+    outline: none;
 }
+
+.filters select {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #ffffff00;
+}
+
+.filters select option {
+    margin-left: .5rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+
+
+/* Catalog */
 
 .catalog {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.item__wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.catalog .item {
+    display: inherit;
+    width: 50%;
     padding: 1rem;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.item__wrapper picture {
-    display: block;
+.catalog .item__wrapper {
+    display: inherit;
+    flex-direction: column;
+    gap: .25rem;
+    background: linear-gradient(#c4c0c0, #999999);
+    padding: 1rem;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    overflow: hidden;
     width: 100%;
 }
 
-.item-img {
-    display: block;
+.catalog .item__wrapper:hover {
+    border-width: 4px;
+    background: linear-gradient(#aca8a8, #848383);
+}
+
+.catalog .item-img {
+    border-radius: 30px;
+    overflow: hidden;
     width: 100%;
-    aspect-ratio: 1 / 1;
     object-fit: cover;
+    aspect-ratio: 1;
 }
 
-.item__name {
-    margin: 1rem 0 0.25rem;
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.item__price {
-    margin: 0 0 0.75rem;
-    font-size: 0.9rem;
-}
-
-.item__button {
-    display: block;
+.catalog button {
     width: 100%;
-    margin-top: auto;
-    padding: 0.7rem 1rem;
-    background: #4d4d4d;
-    color: #fff;
-    font-size: 0.9rem;
-    text-align: center;
-    text-decoration: none;
+    border: solid;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: 15px;
+    background: linear-gradient(var(--color-button-primary), var(--color-button-secondary));
+    color: #171717;
+    border-color: #3f3f3f;
+    font-weight: bolder;
 }
 
-.item__button:hover,
-.item__button:focus-visible {
-    background: #2b2b2b;
+.catalog button:hover {
+    background: var(--color-button-primary-hover);
 }
 
-@media (min-width: 768px) {
-    .catalog {
-        grid-template-columns: repeat(3, 1fr);
+@media screen and (min-width: 768px) {
+    .catalog .item {
+        width: 25%;
     }
 
-    .item__wrapper {
-        padding: 1.5rem;
+    .catalog .item {
+        padding: 2rem;
     }
 
-    .item__name {
-        font-size: 1.1rem;
+    .catalog .item__wrapper {
+        padding: 2rem;
     }
 
-    .item__button {
-        width: auto;
-        padding: 0.6rem 1.75rem;
+    .catalog button {
+        width: 50%;
     }
 }

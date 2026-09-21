@@ -32,7 +32,7 @@
             <div class="right">
                 <ul>
                     <li><a href="#offers">Offers</a></li>
-                    <li><a href="#catalog.html"><strong>Catalog</strong></a></li>
+                    <li><a href="#catalog.html"><strong><span class="text-primary">Catalog</span></strong></a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a class="cart" href=""><span class="icon icon-cart"></span> Cart</a></li>
                 </ul>
@@ -54,25 +54,6 @@
         </nav>
     </header>
     <main>
-        <!-- <section id="hero-page">
-            <div class="hero-page__wrapper">
-                <div class="left">
-                    <h1>Everything about coffee! We sell it!</h1>
-                    <a href="#catalog">See catalog</a>
-                </div>
-
-                <div class="right">
-                    <picture>
-                        <source srcset="./src/media/hero-page/cover-s.jpg" media="(max-width: 640px)" />
-                        <source srcset="./src/media/hero-page/cover-m.jpg" media="(max-width: 1920px)" />
-                        <source srcset="./src/media/hero-page/cover-b.jpg" />
-                        <img class="hero-page__img" alt="Driping coffee into a cup" />
-                    </picture>
-                </div>
-
-            </div>
-        </section> -->
-
         <section id="hero-page">
             <div class="hero-page">
                 <div class="hero-page__wrapper gradient-border-sharp">
@@ -92,14 +73,168 @@
                     </div>
                 </div>
                 </div>
-                
-
             </div>
         </section>
 
-        <section id="offers">
+        <!-- <section id="offers">
+            <h2>Offers</h2>
+        </section> -->
+
+        <section class="bg-secondary" id="catalog">
+            <h2>Catalog</h2>
+
+            <div class="filters wrapper-padded">
+                <div>
+                    <p class="filter-lable">Filter by</p>
+                    <div class="controls">
+                        <form action="availability">
+                            <select name="availability" id="availability">
+                                <option value="availability">Availability</option>
+                                <option value="in-stock">In stock</option>
+                                <option value="out-of-stock">Out of stock</option>
+                            </select> 
+                        </form>
+
+                        <form action="price">
+                            <select name="price" id="price">
+                                <option value="price">Price</option>
+                                <option value="under">Under $15</option>
+                                <option value="range">$15 - $20</option>
+                                <option value="over">Over $20</option>
+                            </select> 
+                        </form>
+                    </div>
+                </div>
+                <div>
+
+                    <p class="filter-lable">Sort by</p>
+                    <div class="controls">
+                        <form action="sort">
+                            <select name="sort-by" id="sort">
+                                <option value="featured">Featured</option>
+                                <option value="popular">Most popular</option>
+                                <option value="alphavetically">Alphabetically</option>
+                                <option value="high-price">Highest price</option>
+                                <option value="low-price">Lowest price</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="catalog wrapper-padded">
+                <article class="item">
+                    <div class="item__wrapper">
+                        <div class="item-img">
+                            <picture>
+                                <source srcset="https://www.w3schools.com/tags/img_white_flower.jpg" media="(max-width: 767px)">
+                                <source srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+                                <img class="item-img" src="https://www.w3schools.com/tags/img_pink_flowers.jpg" alt="Classic Blend coffee bag" loading="lazy">
+                            </picture>
+                        </div>
+                        
+
+                        <h3><strong>Coffee</strong></h3>
+                        <p>$14.50</p>
+                        <button>Buy</button>
+
+                    </div>
+                </article>
+
+                <article class="item">
+                    <div class="item__wrapper">
+                        <div class="item-img">
+                            <picture>
+                                <source srcset="https://www.w3schools.com/tags/img_white_flower.jpg" media="(max-width: 767px)">
+                                <source srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+                                <img class="item-img" src="https://www.w3schools.com/tags/img_pink_flowers.jpg" alt="Classic Blend coffee bag" loading="lazy">
+                            </picture>
+                        </div>
+                        
+
+                        <h3><strong>Coffee</strong></h3>
+                        <p>$14.50</p>
+                        <button>Buy</button>
+
+                    </div>
+                </article>
+
+                <article class="item">
+                    <div class="item__wrapper">
+                        <div class="item-img">
+                            <picture>
+                                <source srcset="https://www.w3schools.com/tags/img_white_flower.jpg" media="(max-width: 767px)">
+                                <source srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+                                <img class="item-img" src="https://www.w3schools.com/tags/img_pink_flowers.jpg" alt="Classic Blend coffee bag" loading="lazy">
+                            </picture>
+                        </div>
+                        
+
+                        <h3><strong>Coffee</strong></h3>
+                        <p>$14.50</p>
+                        <button>Buy</button>
+
+                    </div>
+                </article>
+
+                <article class="item">
+                    <div class="item__wrapper">
+                        <div class="item-img">
+                            <picture>
+                                <source srcset="https://www.w3schools.com/tags/img_white_flower.jpg" media="(max-width: 767px)">
+                                <source srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+                                <img class="item-img" src="https://www.w3schools.com/tags/img_pink_flowers.jpg" alt="Classic Blend coffee bag" loading="lazy">
+                            </picture>
+                        </div>
+                        
+
+                        <h3><strong>Coffee</strong></h3>
+                        <p>$14.50</p>
+                        <button>Buy</button>
+
+                    </div>
+                </article>
+
+                <article class="item">
+                    <div class="item__wrapper">
+                        <div class="item-img">
+                            <picture>
+                                <source srcset="https://www.w3schools.com/tags/img_white_flower.jpg" media="(max-width: 767px)">
+                                <source srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+                                <img class="item-img" src="https://www.w3schools.com/tags/img_pink_flowers.jpg" alt="Classic Blend coffee bag" loading="lazy">
+                            </picture>
+                        </div>
+                        
+
+                        <h3><strong>Coffee</strong></h3>
+                        <p>$14.50</p>
+                        <button>Buy</button>
+
+                    </div>
+                </article>
+
+                <article class="item">
+                    <div class="item__wrapper">
+                        <div class="item-img">
+                            <picture>
+                                <source srcset="https://www.w3schools.com/tags/img_white_flower.jpg" media="(max-width: 767px)">
+                                <source srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+                                <img class="item-img" src="https://www.w3schools.com/tags/img_pink_flowers.jpg" alt="Classic Blend coffee bag" loading="lazy">
+                            </picture>
+                        </div>
+                        
+
+                        <h3><strong>Coffee</strong></h3>
+                        <p>$14.50</p>
+                        <button>Buy</button>
+
+                    </div>
+                </article>
+
+            </div>
 
         </section>
+
 
     </main>
     <footer id="contact">
