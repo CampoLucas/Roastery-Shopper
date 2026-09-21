@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100svh;
     background: var(--color-bg-secondary);
     box-sizing: content-box;
     overflow-x: hidden;
@@ -42,7 +42,7 @@
     display: block;
     width: auto;
     height: 100%;
-    max-height: 70vh;
+    max-height: 70svh;
     object-fit: cover;
     /* mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent), linear-gradient(to bottom, transparent, black 20%, black 80%, transparent); */
     mask-image: radial-gradient(black 20%, transparent 70%);
@@ -86,6 +86,6 @@
     }
 
     .hero-page__img {
-        max-height: 80vh;
+        max-height: 80svh;
     }
 }

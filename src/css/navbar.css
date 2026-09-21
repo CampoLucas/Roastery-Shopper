@@ -1,6 +1,6 @@
 :root {
     --navbar-icon-size: 2.5rem;
-    --size: clamp(1rem, 5vh, var(--navbar-icon-size));
+    --size: clamp(1rem, 5svh, var(--navbar-icon-size));
 }
 
 .navbar {

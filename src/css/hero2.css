@@ -1,7 +1,7 @@
 :root {
-    --hero-bg-s: url(../media/hero-page/bg2-s.jpg);
-    --hero-bg-m: url(../media/hero-page/bg2-m.jpg);
-    --hero-bg-b: url(../media/hero-page/bg2-b.jpg);
+    --hero-bg-s: url(../media/hero-page/bg3-s.webp);
+    --hero-bg-m: url(../media/hero-page/bg3-m.webp);
+    --hero-bg-b: url(../media/hero-page/bg3-b.webp);
     --hero-bg: var(--hero-bg-s);
     --hero-bg-color: black;
     --hero-border-color: linear-gradient(to bottom, #797070, #615b5b);
@@ -25,7 +25,7 @@
     display: flex;
     background: var(--hero-bg);
     background-size: cover;
-    min-height: 100vh;
+    min-height: 100svh;
     justify-content: center;
 }
 
@@ -73,7 +73,7 @@
 
 
 .hero-page h1 {
-    font-size: clamp(0.5rem, clamp(3vh, 10vw, 7vh), 8rem);
+    font-size: clamp(0.5rem, clamp(3svh, 10vw, 7svh), 8rem);
 }
 
 .hero-page a {
@@ -108,7 +108,7 @@
         flex-direction: column;
     } */
     #hero-page {
-        height: 100vh;
+        height: 100svh;
         overflow: hidden;
     }
 
@@ -124,7 +124,7 @@
 @media screen and (width >= 800px) {
     /* horizontal style */
     #hero-page {
-        height: 100vh;
+        height: 100svh;
         overflow: hidden;
     }
 
