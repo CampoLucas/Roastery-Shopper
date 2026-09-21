@@ -95,8 +95,8 @@
     flex-direction: column;
     gap: .25rem;
     background: linear-gradient(#c4c0c0, #999999);
-    padding: 1rem;
-    border-radius: 25px;
+    padding: 10%;
+    border-radius: 15px;
     align-items: center;
     justify-content: center;
     border: solid;
@@ -133,6 +133,14 @@
     background: var(--color-button-primary-hover);
 }
 
+@media screen and (min-width: 1000px) {
+    
+
+    .catalog button {
+        width: 50%;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .catalog .item {
         width: 25%;
@@ -143,10 +151,6 @@
     }
 
     .catalog .item__wrapper {
-        padding: 2rem;
-    }
-
-    .catalog button {
-        width: 50%;
+        padding: 12%;
     }
 }
