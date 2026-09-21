@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100svh;
+    height: 100svh;
     background: var(--color-bg-secondary);
     box-sizing: content-box;
     overflow-x: hidden;

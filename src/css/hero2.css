@@ -25,7 +25,7 @@
     display: flex;
     background: var(--hero-bg);
     background-size: cover;
-    min-height: 100svh;
+    height: 100svh;
     justify-content: center;
 }
 
