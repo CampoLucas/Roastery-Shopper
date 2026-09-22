@@ -10,12 +10,16 @@
     --item-btn-color-hover: var(--color-button-primary-hover);
     
     --filters-gap: .5rem;
+    --catalog-gap: 5vw;
 }
 
 #catalog {
     padding-top: 3rem;
+    padding-inline: 2rem;
     background-color: var(--catalog-bg-color);
-    overflow-y: hidden;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -32,15 +36,10 @@
     font-size: 1.25rem;
 }
 
-.controls {
-    display: flex;
-    gap: var(--filters-gap);
-}
-
 .filters .controls {
     display: flex;
-    width: 20rem;
-    gap: .5rem;
+    width: 80vw;
+    gap: var(--filters-gap);
 }
 
 .filters form {
@@ -92,12 +91,13 @@
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
+    gap: var(--catalog-gap);
 }
 
 .catalog .item {
     display: inherit;
-    width: 50%;
-    padding: 1rem;
+    width: calc(50% - (var(--catalog-gap) * .5));
+    /* padding: 1rem; */
     justify-content: center;
     align-items: center;
 }
@@ -118,6 +118,7 @@
 
 .catalog .item__wrapper .text {
     text-align: center;
+    margin-top: .5rem;
     height: 5rem;
 }
 
@@ -186,8 +187,16 @@
 }
 
 @media screen and (min-width: 768px) {
+    :root {
+        --catalog-gap: .1vw;
+    }
+
+    .filters .controls {
+        width: 20vw;
+    }
+
     .catalog .item {
-        width: 25%;
+        width: calc(25% - (var(--catalog-gap) * .75));
     }
 
     .catalog .item {
