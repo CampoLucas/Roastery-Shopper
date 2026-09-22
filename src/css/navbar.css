@@ -23,11 +23,6 @@
     align-items: center; /* it centers vertically the logo and links */
 }
 
-/* It only affects the wrapper's children and not the grandchildren */
-.navbar .navbar__wrapper>* {
-    margin: 0 15px;
-}
-
 .navbar .navbar__wrapper .right {
     display: flex;
     flex: 1 1 100%;
