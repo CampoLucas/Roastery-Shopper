@@ -97,6 +97,7 @@
     flex: 1;
     background: linear-gradient(to bottom, var(--color-bg-secondary), var(--color-bg-primary));
     background-color: var(--color-bg-primary);
+    overflow: hidden;
 }
 
 .hero-page__wrapper .right,
