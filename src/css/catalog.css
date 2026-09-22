@@ -1,5 +1,14 @@
 :root {
-    --catalog-bg-color: #dbd9d9;
+    --catalog-bg-color: var(--color-bg-main);
+
+    --form-bg-color: var(--color-bg-surface);
+    --forms-color: var(--text-color-navbar);
+    --forms-color-hover: var(--text-color-navbar-hover);
+    
+    --item__wrapper-bg-color: linear-gradient(var(--color-bg-surface), var(--color-bg-main));
+    --item-btn-color: linear-gradient(var(--color-button-primary), var(--color-button-secondary));
+    --item-btn-color-hover: var(--color-button-primary-hover);
+    
     --filters-gap: .5rem;
 }
 
@@ -31,20 +40,21 @@
 .filters .controls {
     display: flex;
     width: 20rem;
+    gap: .5rem;
 }
 
 .filters form {
     width: auto;
     flex: 1;
     padding: .2rem .3rem;
-    background-color: #f7f6f6;
+    background-color: var(--forms-color);
     margin-bottom: 1rem;
     border: solid;
     border-radius: 15px;
 }
 
 .filters form:hover {
-    background-color: var(--color-button-primary);
+    background-color: var(--forms-color-hover);
 }
 
 .filters select:focus-visible {
@@ -56,7 +66,7 @@
     width: 100%;
     height: 100%;
     border: none;
-    background-color: #ffffff00;
+    background-color: transparent;
 }
 
 .filters select option {
@@ -96,7 +106,7 @@
     display: inherit;
     flex-direction: column;
     gap: .25rem;
-    background: linear-gradient(#c4c0c0, #999999);
+    background: var(--item__wrapper-bg-color);
     padding: 10%;
     border-radius: 15px;
     align-items: center;
@@ -108,8 +118,7 @@
 
 .catalog .item__wrapper .text {
     text-align: center;
-    min-height: 2rem;
-    max-height: 3rem;
+    height: 5rem;
 }
 
 .catalog .item-img-container {
@@ -158,14 +167,14 @@
     margin-top: 1rem;
     padding: .5rem;
     border-radius: 15px;
-    background: linear-gradient(var(--color-button-primary), var(--color-button-secondary));
+    background: var(--item-btn-color);
     color: #171717;
     border-color: #3f3f3f;
     font-weight: bolder;
 }
 
 .catalog button:hover {
-    background: var(--color-button-primary-hover);
+    background: var(--item-btn-color-hover);
 }
 
 @media screen and (min-width: 1000px) {

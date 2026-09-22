@@ -2,11 +2,15 @@
     --hero-bg-s: url(../media/hero-page/bg3-s.webp);
     --hero-bg-m: url(../media/hero-page/bg3-m.webp);
     --hero-bg-b: url(../media/hero-page/bg3-b.webp);
-    --hero-bg: var(--hero-bg-s);
+
     --hero-bg-color: black;
-    --hero-border-color: linear-gradient(to bottom, var(--color-bg-main), #5a655f);
-    --hero-font-color: rgb(248, 247, 247);--hero-pad: 1rem;
+
+    --hero-bg: var(--hero-bg-s);
+    --hero-border-color: linear-gradient(to bottom, var(--color-bg-main), var(--color-bg-primary));
+    --hero-font-color: var(--text-color-navbar);
     --hero-mask: linear-gradient(180deg, black 45%, transparent 100%);
+    
+    --hero-pad: 1rem;
     --hero-pad: 5%;
 }
 
@@ -50,12 +54,16 @@
 .hero-page a {
     align-self: flex-start;
     padding: .75rem;
-    background-color: var(--color-bg-main);
+    background-color: var(--color-button-primary);
     font-size: 1rem;
     color: black;
     font-weight: bold;
     border-radius: 5px;
     font-size: clamp(1rem, 1.2vw + 0.75rem, 1.5rem);
+}
+
+.hero-page a:hover {
+    background-color: var(--color-button-primary-hover);
 }
 
 #hero-page .img-container {

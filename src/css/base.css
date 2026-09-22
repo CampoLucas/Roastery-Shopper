@@ -1,35 +1,28 @@
+/* Separated the CSSs in diferent scripts to be easier to understand  */
 @import url(./icon.css);
 @import url(./navbar.css);
 @import url(./hero.css);
 @import url(./footer.css);
 @import url(./catalog.css);
-/* @import url(./catalog.css); */
 
 :root {
-    /* Defining the websites colors */
-    /* Nautral colors */
-    --color-text-primary: #56e18e;
-    --color-text-primary-dark: #31985b;
+    --color-text-primary: #a86845;
+    --color-text-primary-dark: #77401c;
 
-    --color-bg-main: #56e18e;
-    --color-bg-primary: #8b5e36;
-    --color-bg-secondary: #301a06;
-    --color-bg-surface: #b0b0b0;
+    --color-bg-main: #FBF4EA;
+    --color-bg-primary: #7A4B28;
+    --color-bg-secondary: #3D2314;
+    --color-bg-surface: #F1E4D0;
 
-    /* Nav bar */
-    --color-bg-navbar: #191919;
-    --text-color-navbar: #FFFFFF;
-    --text-color-navbar-hover: #cac9c9;
+    --color-bg-navbar: #1C0F07;
+    --text-color-navbar: #FBF4EA;
+    --text-color-navbar-hover: #D9A76A;
 
-    --color-button-primary: var(--color-bg-main);
-    --color-button-secondary: #4cbd79;
-    --color-button-primary-hover: #4eca7f;
+    --color-button-primary: #C98A3E;
+    --color-button-secondary: #A9622F;
+    --color-button-primary-hover: #B87A32;
 
-    /*  */
-
-    /* Footer */
-    --color-bg-footer: #2f2f2f;
-
+    --color-bg-footer: #170C05;
 }
 
 * {
