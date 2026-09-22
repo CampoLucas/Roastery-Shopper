@@ -32,6 +32,15 @@
     padding: 0;
 }
 
+/* So it uses border box as default */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: "Google Sans Flex", sans-serif;
     font-optical-sizing: auto;

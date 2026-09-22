@@ -14,6 +14,7 @@
 .footer {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 5vh;
     gap: var(--footer-gap);
 }
 
@@ -37,11 +38,11 @@
     color: var(--footer-link-hover);
 }
 
-.footer .credit {
+#contact .credit {
     margin-top: var(--footer-gap);
-    text-align: center;
     font-size: .875rem;
     opacity: .7;
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {

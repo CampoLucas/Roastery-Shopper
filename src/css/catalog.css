@@ -17,6 +17,10 @@
     box-sizing: border-box;
 }
 
+#catalog h3 {
+    font-size: 1rem;
+}
+
 /* Filter */
 
 .filters {
@@ -112,7 +116,7 @@
 .catalog .item__wrapper .text {
     text-align: center;
     margin-top: .5rem;
-    height: 5rem;
+    height: 3rem;
 }
 
 .catalog .item-img-container {
