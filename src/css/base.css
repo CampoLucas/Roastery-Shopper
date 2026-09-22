@@ -5,6 +5,7 @@
 @import url(./about.css);
 @import url(./footer.css);
 @import url(./catalog.css);
+@import url(./gallery.css);
 
 :root {
     --color-text-primary: #a86845;
