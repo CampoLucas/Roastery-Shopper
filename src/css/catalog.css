@@ -90,8 +90,8 @@
 .catalog .item {
     display: inherit;
     width: calc(50% - (var(--catalog-gap) * .5));
-    /* padding: 1rem; */
-    justify-content: center;
+    
+    justify-content: center; /* it centers the item__wrapper in the center of the item */
     align-items: center;
 }
 
