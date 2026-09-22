@@ -35,12 +35,6 @@
 
 @media screen and (width >= 600px) {
     .gallery__wrapper {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (width >= 1000px) {
-    .gallery__wrapper {
         grid-template-columns: repeat(4, 1fr);
     }
 }
