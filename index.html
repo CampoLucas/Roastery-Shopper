@@ -31,8 +31,9 @@
             <!-- Buttons -->
             <div class="right">
                 <ul>
-                    <li><a href="#offers">Offers</a></li>
-                    <li><a href="#catalog.html"><strong><span class="text-primary">Catalog</span></strong></a></li>
+                    <!-- <li><a href="#offers">Offers</a></li> -->
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#catalog"><strong><span class="text-primary">Catalog</span></strong></a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a class="cart" href=""><span class="icon icon-cart"></span> Cart</a></li>
                 </ul>
@@ -76,11 +77,35 @@
             </div>
         </section>
 
-        <!-- <section id="offers">
+        <section class="section" id="about">
+            <div class="about wrapper-padded">
+                <div class="about__wrapper">
+                    <div class="left">
+                        <div class="img-container">
+                            <picture>
+                                <source srcset="./src/media/about/about-s.webp" media="(max-width: 640px)">
+                                <source srcset="./src/media/about/about-b.webp">
+                                <img src="./src/media/about/about-b.webp" alt="Roaster pouring fresh coffee beans">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <h2>About us</h2>
+                        <p>We've been roasting small batches of <strong>speciality coffee</strong> for over a decade, sourcing <strong>beans straight from the locals</strong> at <strong>Guatemala</strong> and, from it's very roots, in <strong>Santander</strong>, <strong>Colombia</strong>.</p>
+                        <p>Every bag is rosted when ordered, so you always have the <strong>freshest coffee experience</strong>.</p>
+                        <p><em>This is a showcase website, nothing from this shop is real.</em></p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="wrapper-section" id="offers">
             <h2>Offers</h2>
         </section> -->
 
-        <section class="bg-secondary" id="catalog">
+        <section class="section" id="catalog">
             <h2>Catalog</h2>
 
             <div class="filters wrapper-padded">
@@ -315,7 +340,16 @@
 
     </main>
     <footer id="contact">
+        <div class="footer wrapper-padded">
+            <div class="footer__column">
+                <h2>Contact</h2>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/lucascampo3333/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
 
+            
+        </div>
     </footer>
 </body>
 </html>
