@@ -2,6 +2,7 @@
 @import url(./icon.css);
 @import url(./navbar.css);
 @import url(./hero.css);
+@import url(./about.css);
 @import url(./footer.css);
 @import url(./catalog.css);
 
@@ -51,6 +52,14 @@ a {
     cursor: pointer;
 }
 
+a strong {
+    color: var(--color-text-primary);
+}
+
+a strong:hover {
+    color: var(--text-color-navbar-hover);
+}
+
 li {
     list-style: none;
 }
@@ -60,7 +69,14 @@ li {
     max-width: 1300px;
 }
 
-.text-primary, .text-primary::after {
+/* What all the sections in the body (that aren't the hero page) have in common */
+.section {
+    padding: 10vh 2rem;
+    background: var(--color-bg-main);
+    overflow-x: hidden; /* it must never have an excess in width */
+}
+
+.text-primary {
     color: var(--color-text-primary);
 }
 
@@ -69,16 +85,7 @@ li {
 }
 
 h2 {
-    padding: 2rem 0 3rem 0;
     justify-self: center;
-}
-
-.bg-primary {
-    background-color: var(--color-bg-primary);
-}
-
-.bg-secondary {
-    background-color: var(--color-bg-secondary);
 }
 
 @media screen and (width <= 766px) {

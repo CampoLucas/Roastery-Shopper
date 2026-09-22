@@ -1,0 +1,53 @@
+:root {
+    --about-gap: 2rem;
+}
+
+.about__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--about-gap);
+    align-items: center;
+}
+
+.about .left{
+    flex: 1;
+}
+.about .right {
+    flex: 2;
+}
+
+
+
+.about .img-container {
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.about img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.about .right {
+    color: var(--color-bg-secondary);
+}
+
+.about h2 {
+    text-align: left;
+    justify-self: start;
+    padding-top: 0;
+}
+
+.about p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+@media screen and (width >= 800px) {
+    .about__wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+}
