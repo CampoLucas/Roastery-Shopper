@@ -32,6 +32,11 @@
     padding: 0;
 }
 
+/* So it uses border box as default */
+html {
+    box-sizing: border-box;
+}
+
 *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -40,7 +45,7 @@ body {
     font-family: "Google Sans Flex", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    background-color: #191919; /* In case a background doesn't load in time, it just shows a black background instead of a white one */
+    background-color: #191919; /* In case any background doesn't load in time, it just shows a black background instead of a white one */
 }
 
 button, a {
