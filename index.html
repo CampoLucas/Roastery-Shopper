@@ -36,7 +36,7 @@
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#catalog"><strong><span class="text-primary">Catalog</span></strong></a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a class="cart"><span class="icon icon-cart"></span> Cart</a></li>
+                    <li><a class="cart" href="#cart"><span class="icon icon-cart"></span> Cart</a></li>
                 </ul>
             </div>
         </nav>
@@ -50,7 +50,7 @@
             </div>
 
             <div>
-                <button><span class="icon icon-cart"></span></button>
+                <a href="#cart" aria-label="Cart"><span class="icon icon-cart"></span></a>
 
             </div>
         </nav>
@@ -130,234 +130,54 @@
 
             <div class="filters wrapper-padded">
                 <div>
-                    <p class="filter-lable">Filter by</p>
+                    <label class="filter-lable" for="category-filter">Filter by category</label>
                     <div class="controls">
-                        <form action="availability">
-                            <select name="availability" id="availability">
-                                <option value="availability">Availability</option>
-                                <option value="in-stock">In stock</option>
-                                <option value="out-of-stock">Out of stock</option>
-                            </select> 
-                        </form>
-
-                        <form action="price">
-                            <select name="price" id="price">
-                                <option value="price">Price</option>
-                                <option value="under">Under $15</option>
-                                <option value="range">$15 - $20</option>
-                                <option value="over">Over $20</option>
-                            </select> 
-                        </form>
-                    </div>
-                </div>
-                <div>
-
-                    <p class="filter-lable">Sort by</p>
-                    <div class="controls">
-                        <form action="sort">
-                            <select name="sort-by" id="sort">
-                                <option value="featured">Featured</option>
-                                <option value="popular">Most popular</option>
-                                <option value="alphavetically">Alphabetically</option>
-                                <option value="high-price">Highest price</option>
-                                <option value="low-price">Lowest price</option>
+                        <form>
+                            <select name="category" id="category-filter">
+                                <option value="all">All products</option>
                             </select>
                         </form>
                     </div>
-                </div>                
+                </div>
             </div>
 
-            <div class="catalog  wrapper-padded">
+            <div class="catalog  wrapper-padded" id="product-list"></div>
+            <template id="product-template">
                 <article class="item">
                     <div class="item__wrapper">
                         <div class="item-img-container">
                             <picture>
                                 <source srcset="./src/media/catalog/default-s.webp" media="(max-width: 767px)">
                                 <source srcset="./src/media/catalog/default-b.webp">
-                                <img class="item-img showcase" src="./src/media/catalog/default-b.webp" alt="Guatemalan coffee bag" loading="lazy">
+                                <img class="item-img showcase" src="./src/media/catalog/default-b.webp" alt="" loading="lazy">
                             </picture>
                             <picture>
                                 <source srcset="./src/media/catalog/default-s-hover.webp" media="(max-width: 767px)">
                                 <source srcset="./src/media/catalog/default-b-hover.webp">
-                                <img class="item-img hover" src="./src/media/catalog/default-b-hover.webp" alt="Guatemalan coffee bag" loading="lazy">
+                                <img class="item-img hover" src="./src/media/catalog/default-b-hover.webp" alt="" loading="lazy">
                             </picture>
                         </div>
                         
                         <div class="text">
-                            <h3><strong>Guatemalan coffee</strong></h3>
+                            <h3><strong></strong></h3>
                         </div>
-                        <p>$14.50</p>
-                        <button>Buy</button>
+                        <p></p>
+                        <button type="button">Buy</button>
 
                     </div>
                 </article>
-                <article class="item">
-                    <div class="item__wrapper">
-                        <div class="item-img-container">
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b.webp">
-                                <img class="item-img showcase" src="./src/media/catalog/default-b.webp" alt="Colombian coffee bag" loading="lazy">
-                            </picture>
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s-hover.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b-hover.webp">
-                                <img class="item-img hover" src="./src/media/catalog/default-b-hover.webp" alt="Colombian coffee bag" loading="lazy">
-                            </picture>
-                        </div>
-                        
-                        <div class="text">
-                            <h3><strong>Colombian coffee</strong></h3>
-                        </div>
-                        <p>$15.00</p>
-                        <button>Buy</button>
-
-                    </div>
-                </article>
-                <article class="item">
-                    <div class="item__wrapper">
-                        <div class="item-img-container">
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b.webp">
-                                <img class="item-img showcase" src="./src/media/catalog/default-b.webp" alt="Ethiopian coffee bag" loading="lazy">
-                            </picture>
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s-hover.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b-hover.webp">
-                                <img class="item-img hover" src="./src/media/catalog/default-b-hover.webp" alt="Ethiopian coffee bag" loading="lazy">
-                            </picture>
-                        </div>
-                        
-                        <div class="text">
-                            <h3><strong>Ethiopian coffee</strong></h3>
-                        </div>
-                        <p>$16.75</p>
-                        <button>Buy</button>
-
-                    </div>
-                </article>
-                <article class="item">
-                    <div class="item__wrapper">
-                        <div class="item-img-container">
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b.webp">
-                                <img class="item-img showcase" src="./src/media/catalog/default-b.webp" alt="Kenyan coffee bag" loading="lazy">
-                            </picture>
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s-hover.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b-hover.webp">
-                                <img class="item-img hover" src="./src/media/catalog/default-b-hover.webp" alt="Kenyan coffee bag" loading="lazy">
-                            </picture>
-                        </div>
-                        
-                        <div class="text">
-                            <h3><strong>Kenyan coffee</strong></h3>
-                        </div>
-                        <p>$17.25</p>
-                        <button>Buy</button>
-
-                    </div>
-                </article>
-                <article class="item">
-                    <div class="item__wrapper">
-                        <div class="item-img-container">
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b.webp">
-                                <img class="item-img showcase" src="./src/media/catalog/default-b.webp" alt="Brazilian coffee bag" loading="lazy">
-                            </picture>
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s-hover.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b-hover.webp">
-                                <img class="item-img hover" src="./src/media/catalog/default-b-hover.webp" alt="Brazilian coffee bag" loading="lazy">
-                            </picture>
-                        </div>
-                        
-                        <div class="text">
-                            <h3><strong>Brazilian coffee</strong></h3>
-                        </div>
-                        <p>$13.90</p>
-                        <button>Buy</button>
-
-                    </div>
-                </article>
-                <article class="item">
-                    <div class="item__wrapper">
-                        <div class="item-img-container">
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b.webp">
-                                <img class="item-img showcase" src="./src/media/catalog/default-b.webp" alt="Costa Rican coffee bag" loading="lazy">
-                            </picture>
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s-hover.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b-hover.webp">
-                                <img class="item-img hover" src="./src/media/catalog/default-b-hover.webp" alt="Costa Rican coffee bag" loading="lazy">
-                            </picture>
-                        </div>
-                        
-                        <div class="text">
-                            <h3><strong>Costa Rican coffee</strong></h3>
-                        </div>
-                        <p>$15.50</p>
-                        <button>Buy</button>
-
-                    </div>
-                </article>
-                <article class="item">
-                    <div class="item__wrapper">
-                        <div class="item-img-container">
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b.webp">
-                                <img class="item-img showcase" src="./src/media/catalog/default-b.webp" alt="Sumatran coffee bag" loading="lazy">
-                            </picture>
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s-hover.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b-hover.webp">
-                                <img class="item-img hover" src="./src/media/catalog/default-b-hover.webp" alt="Sumatran coffee bag" loading="lazy">
-                            </picture>
-                        </div>
-                        
-                        <div class="text">
-                            <h3><strong>Sumatran coffee</strong></h3>
-                        </div>
-                        <p>$16.00</p>
-                        <button>Buy</button>
-
-                    </div>
-                </article>
-                <article class="item">
-                    <div class="item__wrapper">
-                        <div class="item-img-container">
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b.webp">
-                                <img class="item-img showcase" src="./src/media/catalog/default-b.webp" alt="Honduran coffee bag" loading="lazy">
-                            </picture>
-                            <picture>
-                                <source srcset="./src/media/catalog/default-s-hover.webp" media="(max-width: 767px)">
-                                <source srcset="./src/media/catalog/default-b-hover.webp">
-                                <img class="item-img hover" src="./src/media/catalog/default-b-hover.webp" alt="Honduran coffee bag" loading="lazy">
-                            </picture>
-                        </div>
-                        
-                        <div class="text">
-                            <h3><strong>Honduran coffee</strong></h3>
-                        </div>
-                        <p>$14.20</p>
-                        <button>Buy</button>
-
-                    </div>
-                </article>
-                
-            </div>
+            </template>
 
         </section>
 
 
+        <section class="section" id="cart" aria-labelledby="cart-heading">
+            <div class="wrapper-padded">
+                <h2 id="cart-heading">Cart</h2>
+                <p id="cart-status" role="status"></p>
+                <ul id="cart-items"></ul>
+            </div>
+        </section>
     </main>
     <footer id="contact">
         <div class="footer wrapper-padded">
@@ -412,5 +232,6 @@
             <p>&copy; 2026 Roastery Shopper. Showcase project, nothing here is for sale.</p>
         </div>
     </footer>
+    <script src="src/js/main.js"></script>
 </body>
 </html>

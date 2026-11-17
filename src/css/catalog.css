@@ -175,6 +175,27 @@
     background: var(--item-btn-color-hover);
 }
 
+/* Cart */
+#cart-status {
+    margin: 1rem 0;
+}
+
+#cart-items li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-text-primary);
+}
+
+#cart-items button {
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    background: var(--item-btn-color);
+}
+
 @media screen and (min-width: 1000px) {
     
 
