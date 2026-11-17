@@ -58,7 +58,7 @@
     color: inherit;
 }
 
-.navbar [data-cart-toggle] {
+.navbar .cart-toggle {
     font: inherit;
     letter-spacing: inherit;
 }
