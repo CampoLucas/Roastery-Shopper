@@ -36,7 +36,7 @@
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#catalog"><strong><span class="text-primary">Catalog</span></strong></a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a class="cart" href="#cart"><span class="icon icon-cart"></span> Cart</a></li>
+                    <li><button class="cart" type="button" data-cart-toggle aria-controls="cart" aria-expanded="false"><span class="icon icon-cart" aria-hidden="true"></span> Cart</button></li>
                 </ul>
             </div>
         </nav>
@@ -50,11 +50,20 @@
             </div>
 
             <div>
-                <a href="#cart" aria-label="Cart"><span class="icon icon-cart"></span></a>
+                <button type="button" data-cart-toggle aria-label="Cart" aria-controls="cart" aria-expanded="false"><span class="icon icon-cart" aria-hidden="true"></span></button>
 
             </div>
         </nav>
     </header>
+    <aside class="cart-sidebar" id="cart" aria-labelledby="cart-heading" hidden>
+        <div class="cart-sidebar__header">
+            <h2 id="cart-heading">Cart</h2>
+            <button type="button" id="cart-close" aria-label="Close cart"><span class="icon icon-close" aria-hidden="true"></span></button>
+        </div>
+        <p id="cart-status" role="status"></p>
+        <ul id="cart-items"></ul>
+        <button type="button" id="cart-clear" disabled>Clear all</button>
+    </aside>
     <main>
         <section id="hero-page">
             <div class="hero-page">
@@ -162,21 +171,12 @@
                             <h3><strong></strong></h3>
                         </div>
                         <p></p>
-                        <button type="button">Buy</button>
+                        <button type="button">Add</button>
 
                     </div>
                 </article>
             </template>
 
-        </section>
-
-
-        <section class="section" id="cart" aria-labelledby="cart-heading">
-            <div class="wrapper-padded">
-                <h2 id="cart-heading">Cart</h2>
-                <p id="cart-status" role="status"></p>
-                <ul id="cart-items"></ul>
-            </div>
         </section>
     </main>
     <footer id="contact">

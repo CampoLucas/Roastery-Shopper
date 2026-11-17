@@ -28,3 +28,7 @@
 .icon-cart {
     --icon: url("../media/icons/cart.svg");
 }
+
+.icon-close {
+    --icon: url("../media/icons/close.svg");
+}

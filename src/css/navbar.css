@@ -58,6 +58,11 @@
     color: inherit;
 }
 
+.navbar [data-cart-toggle] {
+    font: inherit;
+    letter-spacing: inherit;
+}
+
 .navbar__wrapper button:hover, .navbar__wrapper a:hover{
     color: var(--text-color-navbar-hover);
 }
